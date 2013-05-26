@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3DF62791-F514-40A9-A335-BED1D9CBB34B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LambdaSqlBuilder</RootNamespace>
+    <AssemblyName>LambdaSqlBuilder</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapter\ISqlAdapter.cs" />
+    <Compile Include="Adapter\SqlAdapterBase.cs" />
+    <Compile Include="Adapter\SqlServer2008Adapter.cs" />
+    <Compile Include="Adapter\SqlServer2012Adapter.cs" />
+    <Compile Include="Adapter\SqlServerAdapterBase.cs" />
+    <Compile Include="Builder\SqlQueryBuilder.cs" />
+    <Compile Include="Builder\SqlQueryBuilderExpr.cs" />
+    <Compile Include="Builder\SqlQueryBuilderSpec.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resolver\ExpressionTree\LikeNode.cs" />
+    <Compile Include="Resolver\ExpressionTree\MemberNode.cs" />
+    <Compile Include="Resolver\ExpressionTree\Node.cs" />
+    <Compile Include="Resolver\ExpressionTree\OperationNode.cs" />
+    <Compile Include="Resolver\ExpressionTree\SingleOperationNode.cs" />
+    <Compile Include="Resolver\ExpressionTree\ValueNode.cs" />
+    <Compile Include="Resolver\LambdaResolver.cs" />
+    <Compile Include="Resolver\LambdaResolverIsIn.cs" />
+    <Compile Include="Resolver\LambdaResolverQuery.cs" />
+    <Compile Include="Resolver\LambdaResolverSpec.cs" />
+    <Compile Include="Resolver\LambdaResolverTree.cs" />
+    <Compile Include="SqlLam.cs" />
+    <Compile Include="SqlLamBase.cs" />
+    <Compile Include="SqlLamColumnAttribute.cs" />
+    <Compile Include="SqlLamTableAttribute.cs" />
+    <Compile Include="ValueObjects\LikeMethod.cs" />
+    <Compile Include="ValueObjects\SelectFunction.cs" />
+    <Compile Include="ValueObjects\SqlAdapter.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

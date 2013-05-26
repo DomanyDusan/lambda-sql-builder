@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaSqlBuilder", "LambdaSqlBuilder\LambdaSqlBuilder.csproj", "{3DF62791-F514-40A9-A335-BED1D9CBB34B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaSqlBuilder.Tests", "LambdaSqlBuilder.Tests\LambdaSqlBuilder.Tests.csproj", "{75D22AB3-B90A-4E91-9888-E7FAB585F393}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DF62791-F514-40A9-A335-BED1D9CBB34B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DF62791-F514-40A9-A335-BED1D9CBB34B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DF62791-F514-40A9-A335-BED1D9CBB34B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DF62791-F514-40A9-A335-BED1D9CBB34B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75D22AB3-B90A-4E91-9888-E7FAB585F393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D22AB3-B90A-4E91-9888-E7FAB585F393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75D22AB3-B90A-4E91-9888-E7FAB585F393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D22AB3-B90A-4E91-9888-E7FAB585F393}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
